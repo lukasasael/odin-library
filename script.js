@@ -66,15 +66,13 @@ function updateLibraryDisplay(book) {
     text = document.createTextNode("Remove");
     const removeButton = document.createElement("button");
     removeButton.style.backgroundColor = "red";
-    removeButton.onclick = function removeBook() {
+    removeButton.onclick = function removeBook() { 
         myLibrary.splice(myLibrary[book.index],1);
-        console.log(myLibrary);
+        node.remove();
     };
 
     removeButton.appendChild(text);
     node.appendChild(removeButton);
 
-    //console.log(myLibrary.globalIndexOf(node));
-    console.log(myLibrary);
     library.appendChild(node);
 };
